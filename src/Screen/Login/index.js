@@ -161,12 +161,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   content: {
-    color: '#ffb6c1',
+    color: '#fff',
     marginTop: 20,
     fontSize: 32,
     lineHeight: 48,
     fontWeight: 'bold',
-    fontStyle: 'italic',
     textAlign: 'center',
   },
 
@@ -186,7 +185,7 @@ const styles = StyleSheet.create({
 
   buttonSignIn: {
     height: 44,
-    marginTop: 80,
+    marginTop: 60,
     marginLeft: 36,
     marginRight: 36,
     justifyContent: 'center',

@@ -16,10 +16,9 @@ const Tabs = () => {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
-          marginBottom: 28,
-          marginLeft: 20,
-          marginRight: 20,
-          marginTop: 12,
+          marginBottom: 16,
+          marginLeft: 12,
+          marginRight: 12,
           elevation: 0,
           backgroundColor: '#ffb6c1',
           borderRadius: 12,
