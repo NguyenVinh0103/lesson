@@ -144,7 +144,7 @@ const Detail = () => {
                 backgroundColor: '#333',
                 borderRadius: 24,
                 width: '100%',
-                height: '52%',
+                height: '60%',
                 marginTop: 320,
               }}>
               
@@ -313,7 +313,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic', 
     fontWeight: '400',
     fontSize: 24,
-    marginLeft: 52,
+    justifyContent:'center',
+    marginLeft: '5%'
   },
   icon: {
     width: 24,
@@ -324,7 +325,7 @@ const styles = StyleSheet.create({
   iconAdd1: {
     width: 32,
     height: 32,
-    marginLeft: 48,
+    marginLeft: '20%',
     marginTop: 4 / 2,
   },
   header: {
@@ -337,7 +338,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 72,
     height: 28,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffb6c1',
     marginLeft: 16,
     marginTop: 12,
     borderRadius: 16,
@@ -348,7 +349,8 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '92%',
-    backgroundColor: '#fff',
+    backgroundColor: '#ffb6c1',
+    shadowColor: '#7fff00',
     justifyContent: 'center',
     borderRadius: 24,
     marginLeft: '4%',
@@ -374,17 +376,17 @@ const styles = StyleSheet.create({
     width: 72,
     height: 72,
     borderRadius: 72 / 2,
-    marginTop: 24,
+    marginTop: '5%',
     marginLeft:8
   },
   imagesFunction: {
     width: 36,
     height: 36,
     marginRight: 24,
-    marginTop: '56%',
+    marginTop: '48%',
   },
   item: {
-    marginTop: '15%',
+    marginTop: '12%',
     marginBottom: '10%',
   },
   txtModal: {
@@ -394,5 +396,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 20,
     marginBottom: '2%',
+  },
+  shadow: {
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
   },
 });

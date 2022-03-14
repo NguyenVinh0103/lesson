@@ -13,17 +13,19 @@ const Tabs = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        showLabel: false,
-        style: {
+        tabBarShowLabel: false,
+        tabBarStyle: {
           position: 'absolute',
-          marginBottom: 24,
+          marginBottom: 16,
           marginLeft: 20,
           marginRight: 20,
+          marginTop: 12,
           elevation: 0,
-          backgroundColor: '#333',
+          backgroundColor: '#ffb6c1',
           borderRadius: 12,
-          height: 80,
-          shadowColor: '#ff4500',
+          height: 44,
+          shadowColor: '#7fff00',
+          ...styles.shadow,
         },
       }}>
       <Tab.Screen
@@ -37,8 +39,10 @@ const Tabs = () => {
                 style={{
                   width: 24,
                   height: 24,
+                  marginLeft:4/2
                 }}
               />
+              <Text style = {{color: focused ? '#fff' : '#333', fontSize: 12}}>Detail</Text>
             </View>
           ),
           headerShown: false,
@@ -55,8 +59,10 @@ const Tabs = () => {
                 style={{
                   width: 24,
                   height: 24,
+                  marginLeft:4
                 }}
               />
+              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Home</Text>
             </View>
           ),
           headerShown: false,
@@ -73,8 +79,10 @@ const Tabs = () => {
                 style={{
                   width: 24,
                   height: 24,
+                  marginLeft:4/2
                 }}
               />
+              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Login</Text>
             </View>
           ),
           headerShown: false,
@@ -91,8 +99,10 @@ const Tabs = () => {
                 style={{
                   width: 24,
                   height: 24,
+                  marginLeft:8
                 }}
               />
+              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Settings</Text>
             </View>
           ),
           headerShown: false,
@@ -109,8 +119,10 @@ const Tabs = () => {
                 style={{
                   width: 24,
                   height: 24,
+                  marginLeft:4/2
                 }}
               />
+              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Mess</Text>
             </View>
           ),
           headerShown: false,
