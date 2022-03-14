@@ -16,7 +16,7 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {Formik, Form, Field} from 'formik';
 import {SignupSchema} from '../../Constant';
 
-import {background, facebook, youtube, instagram} from '../../Assets';
+import {background, facebook, google, twitter,} from '../../Assets';
 const {height} = Dimensions.get('window');
 const Login = () => {
   // function onSubmitHandler(values) {
@@ -116,8 +116,8 @@ const Login = () => {
                       marginTop: 12,
                     }}></View>
                   <Image style={styles.icon} source={facebook} />
-                  <Image style={styles.icon} source={instagram} />
-                  <Image style={styles.icon} source={youtube} />
+                  <Image style={styles.icon} source={google} />
+                  <Image style={styles.icon} source={twitter} />
                   <View
                     style={{
                       width: 90,
@@ -236,6 +236,5 @@ const styles = StyleSheet.create({
     width: 36,
     height: 26,
     borderRadius: 12,
-    color: '#fff',
   },
 });

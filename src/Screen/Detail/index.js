@@ -14,7 +14,7 @@ import React, {useState} from 'react';
 import Modal from 'react-native-modal';
 import ImagePicker from 'react-native-image-crop-picker';
 
-import {background,iconback2, iconAdd1, iconSearch, VinhNguyen, iconMess2, iconCloes, iconWrong2, iconWrong1, iconFriend} from '../../Assets';
+import {background,iconback2, twitter, iconSearch, VinhNguyen, iconMess2, iconCloes, iconWrong2, iconWrong1, iconFriend} from '../../Assets';
 const {height} = Dimensions.get('window');
 
 const Array = [
@@ -30,17 +30,17 @@ const Array = [
   },
   {
     id: 3,
-    name: 'Nguyen Vinh',
+    name: 'Hi hi !',
     title: '190 ban chung',
   },
   {
     id: 4,
-    name: 'Nguyen Vinh',
+    name: 'Ha ha !',
     title: '150 ban chung',
   },
   {
     id: 5,
-    name: 'Nguyen Vinh',
+    name: 'He he',
     title: '160 ban chung',
   },
 ];
@@ -70,12 +70,12 @@ const Detail = () => {
     return (
       <View style={styles.item}>
         <TouchableOpacity onPress={takePhoto}>
-          <Text style={{paddingLeft: 80, color: '#fff', fontSize: 38 / 2}}>
+          <Text style={{paddingLeft: 100, color: '#fff', fontSize: 38 / 2, fontStyle: 'italic', fontWeight: '400',}}>
             {item.name}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={takePhoto}>
-          <Text style={{paddingLeft: 80, color: '#7cfc00'}}>{item.title}</Text>
+          <Text style={{paddingLeft: 100, color: '#333', fontStyle: 'italic', fontWeight: '400',}}>{item.title}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -87,16 +87,17 @@ const Detail = () => {
         source={background}
         resizeMode="cover"
         style={styles.image}>
+      
       <StatusBar
-        barStyle="light-content"
-        backgroundColor={'#333'}
-        hidden={true}
+          barStyle="dark-content"
+          hidden={true}
       />
+        
       <View style={styles.header}>
         <Image style={styles.icon} source={iconback2} />
         <Text style={styles.content}>Bạn bè của Trung Tín</Text>
         <TouchableOpacity>
-          <Image style={styles.iconAdd1} source={iconAdd1} />
+          <Image style={styles.iconAdd1} source={twitter} />
         </TouchableOpacity>
       </View>
       <View
@@ -109,18 +110,18 @@ const Detail = () => {
         }}></View>
       <View style={styles.btnContent}>
         <TouchableOpacity style={styles.btn}>
-          <Text style={{...TEXT, fontSize: 16}}>Tất cả</Text>
+          <Text style={{...TEXT, fontSize: 16, fontStyle: 'italic', fontWeight: '400',}}>Tất cả</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btn}>
-          <Text style={{...TEXT, fontSize: 16}}>Gần đây</Text>
+          <Text style={{...TEXT, fontSize: 16, fontStyle: 'italic', fontWeight: '400',}}>Gần đây</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.Search}>
         <TextInput
           style={styles.input}
           placeholder="Tìm kiếm bạn bè"
-          fontWeight="bold"
-          placeholderTextColor="#fff"
+          fontWeight="400"
+          placeholderTextColor="#333"
           autoFocus={true}
         />
         <Image style={styles.iconSearch} source={iconSearch} />
@@ -143,15 +144,17 @@ const Detail = () => {
                 backgroundColor: '#333',
                 borderRadius: 24,
                 width: '100%',
-                height: '60%',
+                height: '52%',
                 marginTop: 320,
               }}>
+              
               <View style={{flexDirection: 'row'}}>
                 <Image
                   style={{
                     position: 'absolute',
                     width: 48,
                     height: 50,
+                    marginLeft:12,
                     marginTop: 12,
                   }}
                   source={iconFriend}
@@ -170,7 +173,8 @@ const Detail = () => {
                     position: 'absolute',
                     width: 48,
                     height: 50,
-                    marginTop: 20,
+                    marginLeft:12,
+                    marginTop: 12,
                   }}
                   source={iconMess2}
                 />
@@ -188,7 +192,8 @@ const Detail = () => {
                     position: 'absolute',
                     width: 48,
                     height: 50,
-                    marginTop: 32,
+                    marginLeft:12,
+                    marginTop: 28,
                   }}
                   source={iconWrong2}
                 />
@@ -199,9 +204,9 @@ const Detail = () => {
                   {`Bỏ theo dõi  ${name}`}
                 </Text>
               </View>
-              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
+              <Text style={{color: '#ff1493', paddingLeft: 80, fontSize: 16}}>
                 {' '}
-                Không nhìn thấy bài viết của nhau nhưng vẫn là bạn bè
+                Không nhìn thấy bài viết của nhau 
               </Text>
               <View style={{flexDirection: 'row'}}>
                 <Image
@@ -209,7 +214,8 @@ const Detail = () => {
                     position: 'absolute',
                     width: 48,
                     height: 50,
-                    marginTop: 28,
+                    marginLeft:12,
+                    marginTop: 24,
                   }}
                   source={iconCloes}
                 />
@@ -220,9 +226,9 @@ const Detail = () => {
                   {`Chặn  ${name}`}
                 </Text>
               </View>
-              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
+              <Text style={{color: '#ff1493', paddingLeft: 80, fontSize: 16}}>
                 {' '}
-                Sẽ không nhìn thấy bạn liên hệ trên facebook
+                Sẽ không nhìn thấy bạn trên facebook
               </Text>
               <View style={{flexDirection: 'row'}}>
                 <Image
@@ -230,6 +236,7 @@ const Detail = () => {
                     position: 'absolute',
                     width: 48,
                     height: 50,
+                    marginLeft:12,
                     marginTop: 24,
                   }}
                   source={iconWrong1}
@@ -242,8 +249,8 @@ const Detail = () => {
                 </Text>
               </View>
 
-              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
-                {' '}
+              <Text style={{color: '#ff1493', paddingLeft: 80, fontSize: 16}}>
+                {'  '}
                 {`Hủy kết bạn với ${name}`}
               </Text>
             </View>
@@ -303,7 +310,8 @@ const styles = StyleSheet.create({
   },
   content: {
     color:'#fff',
-    fontWeightL: 'bold',
+    fontStyle: 'italic', 
+    fontWeight: '400',
     fontSize: 24,
     marginLeft: 52,
   },
@@ -329,7 +337,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 72,
     height: 28,
-    backgroundColor: '#ff1493',
+    backgroundColor: '#fff',
     marginLeft: 16,
     marginTop: 12,
     borderRadius: 16,
@@ -340,7 +348,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '92%',
-    backgroundColor: '#666',
+    backgroundColor: '#fff',
     justifyContent: 'center',
     borderRadius: 24,
     marginLeft: '4%',
@@ -349,6 +357,7 @@ const styles = StyleSheet.create({
     fontSize: 38 / 2,
     paddingLeft: 60,
     color: 'white',
+    fontStyle: 'italic',
   },
   iconSearch: {
     width: 40,
@@ -365,21 +374,22 @@ const styles = StyleSheet.create({
     width: 72,
     height: 72,
     borderRadius: 72 / 2,
-    marginTop: 28,
+    marginTop: 24,
+    marginLeft:8
   },
   imagesFunction: {
     width: 36,
     height: 36,
     marginRight: 24,
-    marginTop: '72%',
+    marginTop: '56%',
   },
   item: {
-    marginTop: '20%',
+    marginTop: '15%',
     marginBottom: '10%',
   },
   txtModal: {
     color: '#fff',
-    paddingLeft: 60,
+    paddingLeft: 80,
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 20,

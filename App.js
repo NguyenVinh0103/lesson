@@ -1,14 +1,12 @@
-import { StyleSheet, View } from 'react-native'
-import React from 'react'
-// import Login from './src/Screen/Login/index.js'
-import Detail from './src/Screen/Detail/index.js'
-
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Tabs from './src/navigation/tabs'
+import { StyleSheet, Text, View } from 'react-native'
 const App = () => {
   return (
-    <View>
-      <Detail />
-      {/* <Login /> */}
-    </View>
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
   )
 }
 

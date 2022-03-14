@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Image = () => {
+const Mess = () => {
   return (
     <View>
       <Text>index</Text>
@@ -9,6 +9,6 @@ const Image = () => {
   )
 }
 
-export default Image
+export default Mess
 
 const styles = StyleSheet.create({})
