@@ -16,7 +16,7 @@ const Tabs = () => {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
-          marginBottom: 16,
+          marginBottom: 28,
           marginLeft: 20,
           marginRight: 20,
           marginTop: 12,
