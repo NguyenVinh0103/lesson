@@ -42,7 +42,7 @@ const Tabs = () => {
                   marginLeft:4/2
                 }}
               />
-              <Text style = {{color: focused ? '#fff' : '#333', fontSize: 12}}>Detail</Text>
+              <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Detail</Text>
             </View>
           ),
           headerShown: false,
@@ -62,7 +62,7 @@ const Tabs = () => {
                   marginLeft:4
                 }}
               />
-              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Home</Text>
+              <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Home</Text>
             </View>
           ),
           headerShown: false,
@@ -82,7 +82,7 @@ const Tabs = () => {
                   marginLeft:4/2
                 }}
               />
-              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Login</Text>
+              <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Login</Text>
             </View>
           ),
           headerShown: false,
@@ -102,7 +102,7 @@ const Tabs = () => {
                   marginLeft:8
                 }}
               />
-              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Settings</Text>
+              <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Settings</Text>
             </View>
           ),
           headerShown: false,
@@ -122,7 +122,7 @@ const Tabs = () => {
                   marginLeft:4/2
                 }}
               />
-              <Text style = {{color: focused ? '#fff' : '#888', fontSize: 12}}>Mess</Text>
+              <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Mess</Text>
             </View>
           ),
           headerShown: false,
