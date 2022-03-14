@@ -236,5 +236,6 @@ const styles = StyleSheet.create({
     width: 36,
     height: 26,
     borderRadius: 12,
+    color: '#fff',
   },
 });

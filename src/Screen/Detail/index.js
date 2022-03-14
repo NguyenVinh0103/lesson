@@ -7,12 +7,15 @@ import {
   TouchableOpacity,
   TextInput,
   FlatList,
+  ImageBackground,
+  Dimensions,
 } from 'react-native';
 import React, {useState} from 'react';
 import Modal from 'react-native-modal';
 import ImagePicker from 'react-native-image-crop-picker';
 
-import {iconback2, iconAdd1, iconSearch, VinhNguyen} from '../../Assets';
+import {background,iconback2, iconAdd1, iconSearch, VinhNguyen, iconMess2, iconCloes, iconWrong2, iconWrong1, iconFriend} from '../../Assets';
+const {height} = Dimensions.get('window');
 
 const Array = [
   {
@@ -45,7 +48,7 @@ const Array = [
 const Detail = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [name, setName] = useState('');
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState('https://static.topcv.vn/avatars/QRVnjwk0LezxZEWkQwTs_61e023815645f_cvtpl.jpg?1647170991');
 
   const takePhoto = () => {
     ImagePicker.openPicker({
@@ -72,7 +75,7 @@ const Detail = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={takePhoto}>
-          <Text style={{paddingLeft: 80, color: '#666'}}>{item.title}</Text>
+          <Text style={{paddingLeft: 80, color: '#7cfc00'}}>{item.title}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -80,10 +83,14 @@ const Detail = () => {
 
   return (
     <View style={styles.container}>
+      <ImageBackground 
+        source={background}
+        resizeMode="cover"
+        style={styles.image}>
       <StatusBar
         barStyle="light-content"
         backgroundColor={'#333'}
-        hidden={false}
+        hidden={true}
       />
       <View style={styles.header}>
         <Image style={styles.icon} source={iconback2} />
@@ -147,7 +154,7 @@ const Detail = () => {
                     height: 50,
                     marginTop: 12,
                   }}
-                  source={iconAdd1}
+                  source={iconFriend}
                 />
                 <Text
                   onPress={() => toggleModal(false)}
@@ -165,13 +172,13 @@ const Detail = () => {
                     height: 50,
                     marginTop: 20,
                   }}
-                  source={iconAdd1}
+                  source={iconMess2}
                 />
                 <Text
                   onPress={() => toggleModal(false)}
                   style={styles.txtModal}>
                   {' '}
-                  {`nhắn tin cho  ${name}`}{' '}
+                  {`Nhắn tin cho  ${name}`}{' '}
                 </Text>
               </View>
 
@@ -183,16 +190,16 @@ const Detail = () => {
                     height: 50,
                     marginTop: 32,
                   }}
-                  source={iconAdd1}
+                  source={iconWrong2}
                 />
                 <Text
                   onPress={() => toggleModal(false)}
                   style={styles.txtModal}>
                   {' '}
-                  {`bỏ theo dõi  ${name}`}
+                  {`Bỏ theo dõi  ${name}`}
                 </Text>
               </View>
-              <Text style={{color: '#888', paddingLeft: 60, fontSize: 16}}>
+              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
                 {' '}
                 Không nhìn thấy bài viết của nhau nhưng vẫn là bạn bè
               </Text>
@@ -204,7 +211,7 @@ const Detail = () => {
                     height: 50,
                     marginTop: 28,
                   }}
-                  source={iconAdd1}
+                  source={iconCloes}
                 />
                 <Text
                   onPress={() => toggleModal(false)}
@@ -213,7 +220,7 @@ const Detail = () => {
                   {`Chặn  ${name}`}
                 </Text>
               </View>
-              <Text style={{color: '#888', paddingLeft: 60, fontSize: 16}}>
+              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
                 {' '}
                 Sẽ không nhìn thấy bạn liên hệ trên facebook
               </Text>
@@ -225,7 +232,7 @@ const Detail = () => {
                     height: 50,
                     marginTop: 24,
                   }}
-                  source={iconAdd1}
+                  source={iconWrong1}
                 />
                 <Text
                   onPress={() => toggleModal(false)}
@@ -235,14 +242,14 @@ const Detail = () => {
                 </Text>
               </View>
 
-              <Text style={{color: '#888', paddingLeft: 60, fontSize: 16}}>
+              <Text style={{color: '#ff1493', paddingLeft: 60, fontSize: 16}}>
                 {' '}
                 {`Hủy kết bạn với ${name}`}
               </Text>
             </View>
           </Modal>
           <TouchableOpacity onPress={() => toggleModal(true)}>
-            <Image style={styles.imagesFunction} source={iconAdd1} />
+            <Image style={styles.imagesFunction} source={iconFriend} />
           </TouchableOpacity>
         </View>
 
@@ -250,48 +257,52 @@ const Detail = () => {
           <Image style={styles.avatar} source={VinhNguyen} />
 
           <TouchableOpacity onPress={() => toggleModal(true)}>
-            <Image style={styles.imagesFunction} source={iconAdd1} />
+            <Image style={styles.imagesFunction} source={iconFriend} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.body}>
           <Image style={styles.avatar} source={VinhNguyen} />
           <TouchableOpacity onPress={toggleModal}>
-            <Image style={styles.imagesFunction} source={iconAdd1} />
+            <Image style={styles.imagesFunction} source={iconFriend} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.body}>
           <Image style={styles.avatar} source={VinhNguyen} />
           <TouchableOpacity onPress={toggleModal}>
-            <Image style={styles.imagesFunction} source={iconAdd1} />
+            <Image style={styles.imagesFunction} source={iconFriend} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.body}>
           <Image onpress ={{uri : image}}style={styles.avatar} source={VinhNguyen} />
           <TouchableOpacity onPress={toggleModal}>
-            <Image style={styles.imagesFunction} source={iconAdd1} />
+            <Image style={styles.imagesFunction} source={iconFriend} />
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+      </ImageBackground>
+    </View>      
   );
 };
 
 export default Detail;
 const TEXT = {
-  color: '#fff',
+  color: '#000',
   textAlign: 'center',
 };
 
 const styles = StyleSheet.create({
   container: {
     height: '100%',
-    backgroundColor: '#333',
+  },
+  image: {
+    height: height,
+    width: '100%',
   },
   content: {
-    ...TEXT,
+    color:'#fff',
     fontWeightL: 'bold',
     fontSize: 24,
     marginLeft: 52,
@@ -318,7 +329,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 72,
     height: 28,
-    backgroundColor: '#666',
+    backgroundColor: '#ff1493',
     marginLeft: 16,
     marginTop: 12,
     borderRadius: 16,
