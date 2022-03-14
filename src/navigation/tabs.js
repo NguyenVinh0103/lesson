@@ -33,13 +33,12 @@ const Tabs = () => {
         component={Detail}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
+            <View style = {{justifyContent:'center', alignItems:'center'}}>
               <Image
                 source={iconDetail1}
                 style={{
                   width: 24,
                   height: 24,
-                  marginLeft:4/2
                 }}
               />
               <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Detail</Text>
@@ -53,13 +52,12 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
+            <View style = {{justifyContent:'center', alignItems:'center'}}>
               <Image
                 source={iconHome}
                 style={{
                   width: 24,
                   height: 24,
-                  marginLeft:4
                 }}
               />
               <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Home</Text>
@@ -73,13 +71,12 @@ const Tabs = () => {
         component={Login}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
+            <View style = {{justifyContent:'center', alignItems:'center'}}>
               <Image
                 source={iconFriend}
                 style={{
                   width: 24,
                   height: 24,
-                  marginLeft:4/2
                 }}
               />
               <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Login</Text>
@@ -93,13 +90,12 @@ const Tabs = () => {
         component={Settings}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
+            <View style = {{justifyContent:'center', alignItems:'center'}}>
               <Image
                 source={iconSetting}
                 style={{
                   width: 24,
                   height: 24,
-                  marginLeft:8
                 }}
               />
               <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Settings</Text>
@@ -113,13 +109,12 @@ const Tabs = () => {
         component={Mess}
         options={{
           tabBarIcon: ({focused}) => (
-            <View>
+            <View style = {{justifyContent:'center', alignItems:'center'}}>
               <Image
                 source={iconBell}
                 style={{
                   width: 24,
                   height: 24,
-                  marginLeft:4/2
                 }}
               />
               <Text style = {{color: focused ? '#fff' : '#000', fontSize: 12}}>Mess</Text>

@@ -14,7 +14,7 @@ import React, {useState} from 'react';
 import Modal from 'react-native-modal';
 import ImagePicker from 'react-native-image-crop-picker';
 
-import {background,iconback2, twitter, iconSearch, VinhNguyen, iconMess2, iconCloes, iconWrong2, iconWrong1, iconFriend} from '../../Assets';
+import {background, iconback2, twitter, iconSearch, VinhNguyen, iconMess2, iconCloes, iconWrong2, iconWrong1, iconFriend} from '../../Assets';
 const {height} = Dimensions.get('window');
 
 const Array = [
@@ -61,7 +61,7 @@ const Detail = () => {
     });
   };
 
-  const toggleModal = name => {
+  const toggleModal = (name) => {
     setName('Su phu');
     setModalVisible(!isModalVisible);
   };
