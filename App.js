@@ -1,12 +1,13 @@
 import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import Login from './src/Screen/Login/index.js'
-import {SignupSchema} from './src/Screen/Login/validation.js'
+// import Login from './src/Screen/Login/index.js'
+import Detail from './src/Screen/Detail/index.js'
 
 const App = () => {
   return (
     <View>
-      <Login />
+      <Detail />
+      {/* <Login /> */}
     </View>
   )
 }

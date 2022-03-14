@@ -17,7 +17,6 @@ import {Formik, Form, Field} from 'formik';
 import {SignupSchema} from '../../Constant';
 
 import {background, facebook, youtube, instagram} from '../../Assets';
-
 const {height} = Dimensions.get('window');
 const Login = () => {
   // function onSubmitHandler(values) {
@@ -26,12 +25,12 @@ const Login = () => {
   // function isFormValid(isValid, touched) {
   //   return isValid && Object.keys(touched).length !== 0;
   // }
-  const onSubmitHandler = (values) =>{
+  const onSubmitHandler = values => {
     Alert.alert('Login Success!', 'Data' + JSON.stringify(values));
-  }
+  };
   const isFormValid = (isValid, touched) => {
     return isValid && Object.keys(touched).length !== 0;
-  }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -50,7 +49,7 @@ const Login = () => {
         />
         <KeyboardAwareScrollView keyboardShouldPersistTaps="handled">
           <Formik
-            initialValues={{email: '',password: ''}}
+            initialValues={{email: '', password: ''}}
             validationSchema={SignupSchema}
             onSubmit={onSubmitHandler}>
             {({
